@@ -51,14 +51,6 @@ Change detection is the task of identifying what changed between two satellite i
 ### Real bitemporal pairs from LEVIR-CD+
 
 These are real satellite images showing urban development over time. Notice how empty land transforms into residential neighborhoods — the white pixels in the mask show exactly where buildings appeared!
-
-| T1 (Before) | T2 (After) | Change Mask |
-|-------------|------------|-------------|
-| ![t1](outputs/samples/real/real_t1_000003.png) | ![t2](outputs/samples/real/real_t2_000003.png) | ![mask](outputs/samples/real/real_mask_000003.png) |
-| ![t1](outputs/samples/real/real_t1_000005.png) | ![t2](outputs/samples/real/real_t2_000005.png) | ![mask](outputs/samples/real/real_mask_000005.png) |
-| ![t1](outputs/samples/real/real_t1_000008.png) | ![t2](outputs/samples/real/real_t2_000008.png) | ![mask](outputs/samples/real/real_mask_000008.png) |
-| ![t1](outputs/samples/real/real_t1_000009.png) | ![t2](outputs/samples/real/real_t2_000009.png) | ![mask](outputs/samples/real/real_mask_000009.png) |
-
 > White pixels = new buildings appeared. Black pixels = no change.
 > Patches selected for having more than 20% change ratio for clear visualization.
 

@@ -1,0 +1,8 @@
+data/
+venv/
+outputs/synthetic_pairs/
+outputs/checkpoints/
+__pycache__/
+*.pyc
+*.npy
+outputs/checkpoints/

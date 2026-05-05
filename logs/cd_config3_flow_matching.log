@@ -1,0 +1,2 @@
+epoch,train_loss,val_f1,val_iou,val_precision,val_recall
+1,0.281344,0.651630,0.517843,0.806795,0.584089

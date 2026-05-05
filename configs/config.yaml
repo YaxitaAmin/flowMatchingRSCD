@@ -1,0 +1,65 @@
+# project paths
+paths:
+  synthetic_pairs: outputs/synthetic_pairs
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  checkpoints: "outputs/checkpoints"
+  generated: "outputs/generated"
+  plots: "outputs/plots"
+  logs: "logs"
+
+# data settings
+data:
+  patch_size: 256
+  change_ratio_min: 0.01
+  train_split: 445
+  val_split: 64
+  test_split: 128
+  num_workers: 1
+
+# flow matching model settings
+flow_matching:
+  in_channels: 6        # 3 channels t1 + 3 channels t2
+  base_channels: 64
+  channel_mults: [1, 2, 4, 8]
+  num_res_blocks: 2
+  time_emb_dim: 256
+  learning_rate: 0.0002
+  batch_size: 4
+  epochs: 100
+  sigma_min: 0.001
+
+# change detection unet settings
+change_detection:
+  in_channels: 6        # 3 channels t1 + 3 channels t2
+  out_channels: 1
+  base_channels: 64
+  learning_rate: 0.0001
+  batch_size: 4
+  epochs: 1
+
+# augmentation settings
+augmentation:
+  horizontal_flip: true
+  vertical_flip: true
+  random_crop: true
+  color_jitter: true
+  color_jitter_brightness: 0.2
+  color_jitter_contrast: 0.2
+
+# evaluation
+evaluation:
+  fid_batch_size: 50
+  perturbations:
+    gaussian_noise_std: 0.05
+    blur_kernel_size: 5
+    occlusion_ratio: 0.1
+
+# normalization stats (computed from training set)
+normalization:
+  mean_t1: [0.4679, 0.4625, 0.3926]
+  std_t1:  [0.2298, 0.2170, 0.1974]
+  mean_t2: [0.3687, 0.3607, 0.3132]
+  std_t2:  [0.1806, 0.1767, 0.1681]
+  mean_combined: [0.4183, 0.4116, 0.3529]
+  std_combined:  [0.2052, 0.1969, 0.1828]
